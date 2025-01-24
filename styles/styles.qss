@@ -1,0 +1,191 @@
+QWidget {
+    background-color: white;
+    background: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 1, y2: 1,
+        stop: 0 #afaeae,  
+        stop: 0.5 #808080,
+        stop: 1 #afaeae   
+    );
+    font-family: 'Tahoma';
+}
+
+QWidget[fontsize="small"] {
+    font-size: 12pt;
+}
+
+QWidget[fontsize="medium"] {
+    font-size: 16pt;
+}
+
+QWidget[fontsize="large"] {
+    font-size: 32pt;
+}
+
+QWidget[weight="bold"] {
+    font-weight: bold;
+}
+
+QToolTip {
+    background-color: rgb(180, 180, 180); 
+    color: rgb(50, 50, 50); 
+    font-weight: bold;
+}
+
+QLabel {
+    background-color: rgba(0,0,0,0);
+    color: black;
+}
+
+#mainTitle {
+    font-family: Orbitron;
+    font-size: 32pt;
+    font-weight: bold;
+    color: rgb(34, 179, 179);
+}
+
+QGroupBox {
+    font-weight: bold;
+    color:rgba(0, 0, 0, 255);
+    background-color: rgba(7, 162, 189, 30);
+    border: 1px solid black;
+    border-radius: 5px;
+    border-color:rgb(180,180,180);
+    margin-top: 5ex;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    background-color: rgba(0,0,0,0);
+    
+}
+
+QLineEdit,
+QTextEdit {
+    background-color: rgb(200, 200, 200); 
+    color: rgb(50,50,50); 
+    margin: 5px;
+}
+
+QComboBox {
+    margin: 5px; 
+    selection-background-color: rgb(150,150,150);
+    color: rgb(50,50,50);
+    background-color: rgb(200, 200, 200);
+    border-style: solid;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 5;
+    padding: 1px 0px 1px 5px;
+    font-size:12pt;
+}
+                      
+QComboBox::drop-down {
+    font-weight: bold; 
+    color: rgb(180,180,180); 
+    border: 2px solid rgb(107, 104, 104);
+    border-radius: 5px;                           
+    background: rgba(170, 170, 170, 170);
+    background-color: rgb(0, 130, 0);
+    width: 15px; 
+    max-height: 40px;
+}
+    
+QComboBox::editable {
+    background-color: rgb(200, 200, 200);
+    color: rgb(34, 34, 34);
+    border-radius:5px; 
+    font-weight:bold;
+}
+    
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    background-color:rgb(200,200,200);
+}
+
+QCheckBox {
+    background-color: rgba(0,0,0,0%); 
+    margin:5px;
+}
+
+QCheckBox::indicator {
+    border: 1px solid #000000; 
+    width: 20px;
+    height: 20px;
+    background: rgb(255,255,255); 
+    border-radius: 3px;
+}
+
+QCheckBox::indicator::checked {
+    background:rgb(0, 130, 0);
+}
+
+QRadioButton {
+    spacing: 5px; 
+    color:rgb(70,70,70);                            
+    font-size:12pt; 
+    font-weight:bold; 
+    background-color: rgba(0,0,0,0%); 
+    margin: 10px;
+}
+
+QRadioButton::indicator {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 7px;
+}
+
+QRadioButton::indicator:unchecked {
+    border: 2px solid rgb(100,100,100);
+}
+
+QRadioButton::indicator:checked {
+    background-color:rgb(0, 130, 0);
+    border: 2px solid rgb(70, 74, 75);
+}
+
+QPushButton[iconButton="True"] {
+    background-color: black;
+}
+
+QPushButton {
+    background-color: rgb(0, 130, 0);
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+QPushButton::pressed
+{
+    background-color:rgba(7, 162, 189, 30);
+    border-style:none;
+    border-radius:25px;
+}
+
+QTreeView{
+    background-color: rgba(7, 162, 189, 30);
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+QHeaderView::section {
+    background-color: #4682b4;  /* Steel blue header background */
+    color: white;               /* White text color */
+    font-weight: bold;          /* Bold font */
+    font-size: 14px;            /* Font size */
+    padding: 4px;               /* Padding */
+}
+
+QMessageBox {
+    color:rgb(20,20,20); 
+    font-family: 'Tahoma'; 
+    font-size:12pt; 
+    font-weight:bold;
+    background: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 1, y2: 1,
+        stop: 0 #afaeae,  
+        stop: 0.5 #808080,
+        stop: 1 #afaeae   
+    );
+}

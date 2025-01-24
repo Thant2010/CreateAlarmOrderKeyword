@@ -1,0 +1,32 @@
+--> 23.01.2025 00:43
+--> Benutzer: mbier
+--> Traceback (most recent call last):
+
+  File "D:\Python\Projekte\AAO\Neue AAO\CreateAAOEntry\elementsGui\treeViewWindow.py", line 56, in on_item_double_clicked
+    self.__mainWindow.getTreeViewData(itemHierachy)
+
+  File "D:\Python\Projekte\AAO\Neue AAO\CreateAAOEntry\elementsGui\mainPage.py", line 104, in getTreeViewData
+    box.setKeywordData(category, keyword)
+
+  File "D:\Python\Projekte\AAO\Neue AAO\CreateAAOEntry\elementsGui\groupBoxes\alarmScenariosBox.py", line 20, in setKeywordData
+    scenarioData = DataManager.getKeywordData(category, keyword, "scenario")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "D:\Python\Projekte\AAO\Neue AAO\CreateAAOEntry\UtilityClasses\DataManager.py", line 31, in getKeywordData
+    return fullData[category][keyword][group]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+
+KeyError: 'scenario'
+
+
+--> 24.01.2025 01:33
+--> Benutzer: mbier
+--> Traceback (most recent call last):
+
+  File "D:\Python\Projekte\AAO\Neue AAO\CreateAAOEntry\elementsGui\mainPage.py", line 94, in __openTreeView
+    self.__treeWindow = TreeViewWindow(self)
+                        ^^^^^^^^^^^^^^^^^^^^
+
+TypeError: TreeViewWindow.__init__() takes 1 positional argument but 2 were given
+
+

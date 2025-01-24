@@ -1,0 +1,11 @@
+{
+  "alarmCategorys": ["Brand", "TH", "TH-PIZ", "TH-Wasser", "Gefahrstoffe", "First Responder", "Sonstiges"],
+  "vehicles": ["1/55", "1/48", "1/29", "1/83", "1/61", "1/18", "1/10"],
+  "staffs": ["AT", "WT", "ST", "Ma", "Me", "First Responder"],
+  "iconButtons": {
+    "save": ["icons/save.png", "Daten Speichern"],
+    "tree": ["icons/tree.png", "Elementbaum öffen"],
+    "clear": ["icons/clear.png", "Eingabe leeren"],
+    "quit": ["icons/quit.png", "Beenden"]
+}
+}

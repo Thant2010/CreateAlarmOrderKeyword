@@ -1,0 +1,25 @@
+{
+    "vehicles":{
+        "1/55": false,
+        "1/48": false,
+        "1/29": false,
+        "1/83": false,
+        "1/61": false,
+        "1/18": false,
+        "1/10": false
+    },
+    "staff":{
+        "AT": false,
+        "WT": false,
+        "ST": false,
+        "Me": false,
+        "Ma": false,
+        "First Responder": false
+    },
+    "leader":{
+        "A-Dienst": "Nichts",
+        "B-Dienst": "Nichts",
+        "C-Dienst": "Nichts"
+    },
+    "instructions": {}
+}
