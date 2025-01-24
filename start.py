@@ -2,8 +2,8 @@ import locale
 import sys
 import traceback
 
-from PyQt5 import QtGui
-from PyQt5.QtWidgets import QApplication
+from PySide6 import QtGui
+from PySide6.QtWidgets import QApplication
 from UtilityFunctions.writeErrorToLogFile import writeErrorToLogFile
 from elementsGui.mainPage import MainPage
 

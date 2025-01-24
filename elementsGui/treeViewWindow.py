@@ -1,6 +1,6 @@
-from PyQt5.QtCore import QModelIndex, Qt
-from PyQt5.QtGui import QIcon, QStandardItemModel, QStandardItem
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTreeView
+from PySide6.QtCore import QModelIndex, Qt
+from PySide6.QtGui import QIcon, QStandardItemModel, QStandardItem
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QTreeView
 from UtilityClasses.DataManager import DataManager
 from UtilityClasses.SignalManager import signalManager
 

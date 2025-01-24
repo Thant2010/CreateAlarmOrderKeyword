@@ -1,5 +1,5 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLabel, QCheckBox
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QLabel, QCheckBox
 from UtilityClasses.LayoutSpacer import LayoutSpacer
 from elementsGui.elementRows.BaseHBoxRow import BaseHBoxRow
 

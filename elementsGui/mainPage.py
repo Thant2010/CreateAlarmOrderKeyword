@@ -1,6 +1,6 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QLabel, QGridLayout
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QWidget, QLabel, QGridLayout
 
 from UtilityClasses.SignalManager import signalManager
 from UtilityClasses.shadowEffect import ShadowEffect

@@ -1,5 +1,5 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QComboBox, QHBoxLayout, QLineEdit
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLineEdit
 
 from globals import alarmCategorys
 from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox

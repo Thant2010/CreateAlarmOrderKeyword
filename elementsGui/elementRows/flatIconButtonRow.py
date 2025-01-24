@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QVBoxLayout
+from PySide6.QtWidgets import QVBoxLayout
 from globals import iconButtons
 from elementsGui.buttons.flatIconButton import FlatIconButton
 from UtilityClasses.LayoutSpacer import LayoutSpacer

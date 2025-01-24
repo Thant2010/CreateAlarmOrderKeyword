@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QVBoxLayout
+from PySide6.QtWidgets import QVBoxLayout
 from elementsGui.elementRows.leaderRow import LeaderRow
 from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox
 from UtilityClasses.DataManager import DataManager

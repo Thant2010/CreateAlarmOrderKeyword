@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QGroupBox
+from PySide6.QtWidgets import QGroupBox
 from abc import abstractmethod
 
 class BaseGroupBox(QGroupBox):

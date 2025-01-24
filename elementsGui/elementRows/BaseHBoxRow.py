@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QHBoxLayout
+from PySide6.QtWidgets import QHBoxLayout
 from abc import abstractmethod
 
 class BaseHBoxRow(QHBoxLayout):

@@ -1,11 +1,11 @@
-from PyQt5.QtCore import pyqtSignal, QObject
+from PySide6.QtCore import Signal, QObject
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QPushButton
 
 class SignalManager(QObject):
     # Definiere das Signal als Instanzattribut
-    selection_signal = pyqtSignal(str, str)
+    selection_signal = Signal(str, str)
 
     def __init__(self):
         super().__init__()

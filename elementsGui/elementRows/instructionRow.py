@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QLineEdit, QButtonGroup, QRadioButton
+from PySide6.QtWidgets import QLineEdit, QButtonGroup, QRadioButton
 
 from UtilityClasses.DataManager import DataManager
 from elementsGui.elementRows.BaseHBoxRow import BaseHBoxRow

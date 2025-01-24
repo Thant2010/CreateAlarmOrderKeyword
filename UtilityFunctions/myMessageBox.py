@@ -1,5 +1,5 @@
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QMessageBox
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QMessageBox
 
 from UtilityClasses.shadowEffect import ShadowEffect
 

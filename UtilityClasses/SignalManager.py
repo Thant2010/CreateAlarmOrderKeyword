@@ -1,9 +1,9 @@
-from PyQt5.QtCore import pyqtSignal, QObject
+from PySide6.QtCore import Signal, QObject
 
 
 class SignalManager(QObject):
 
-    onSelectKeyword = pyqtSignal(list)
+    onSelectKeyword = Signal(list)
 
     def __init__(self):
         super().__init__()

@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QVBoxLayout, QTextEdit
+from PySide6.QtWidgets import QVBoxLayout, QTextEdit
 
 from UtilityClasses.DataManager import DataManager
 from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox

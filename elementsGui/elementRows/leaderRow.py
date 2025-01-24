@@ -1,5 +1,5 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLabel, QButtonGroup, QRadioButton
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QLabel, QButtonGroup, QRadioButton
 
 from elementsGui.elementRows.BaseHBoxRow import BaseHBoxRow
 
