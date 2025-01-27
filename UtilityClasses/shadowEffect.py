@@ -1,5 +1,6 @@
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QGraphicsDropShadowEffect
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QGraphicsDropShadowEffect
+from PyQt6.QtGui import QColor
 
 
 class ShadowEffect:
@@ -10,4 +11,4 @@ class ShadowEffect:
         self.shadow = QGraphicsDropShadowEffect()
         self.shadow.setBlurRadius(25)
         self.shadow.setOffset(5, 3)
-        self.shadow.setColor(Qt.black)
+        self.shadow.setColor(QColor(Qt.GlobalColor.black))

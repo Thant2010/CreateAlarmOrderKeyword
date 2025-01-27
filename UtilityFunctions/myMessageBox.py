@@ -1,19 +1,20 @@
-from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QMessageBox
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QMessageBox
 
-from UtilityClasses.shadowEffect import ShadowEffect
+from utilityClasses.ShadowEffect import ShadowEffect
 
 
 def MyMessageBox(windowTitle, message):
     msg = QMessageBox()
     msg.setWindowTitle(windowTitle)
     msg.setWindowIcon(QIcon("icons/windowIcon.ico"))
-    msg.setIcon(QMessageBox.Information)
+    msg.setIcon(QMessageBox.Icon.Information)
     msg.setText(message)
     msg.setGraphicsEffect(ShadowEffect().shadow)
-    msg.setStandardButtons(QMessageBox.Ok)
+    msg.setStandardButtons(QMessageBox.StandardButton.Ok)
     msg.setGeometry(650, 450, 300, 300)
 
     returnvalue = msg.exec()
-    if returnvalue == QMessageBox.Ok:
+
+    if returnvalue == QMessageBox.StandardButton.Ok:
         pass

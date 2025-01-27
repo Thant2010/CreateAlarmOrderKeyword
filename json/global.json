@@ -1,5 +1,6 @@
 {
   "alarmCategorys": ["Brand", "TH", "TH-PIZ", "TH-Wasser", "Gefahrstoffe", "First Responder", "Sonstiges"],
+  "aaoPath": "W:\\4813-WerkSicherheit\\Zentrale\\Bakup Daten Schichtbuch\\NewAAO\\AAO.json",
   "vehicles": ["1/55", "1/48", "1/29", "1/83", "1/61", "1/18", "1/10"],
   "staffs": ["AT", "WT", "ST", "Ma", "Me", "First Responder"],
   "iconButtons": {

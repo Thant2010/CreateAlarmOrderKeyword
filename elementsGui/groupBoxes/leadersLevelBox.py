@@ -1,13 +1,15 @@
-from PySide6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QVBoxLayout, QGroupBox
+
+from utilityClasses.SignalManager import signalManager
 from elementsGui.elementRows.leaderRow import LeaderRow
-from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox
-from UtilityClasses.DataManager import DataManager
+from utilityClasses.DataManager import DataManager
 
 
-class LeadersLevelGroupBox(BaseGroupBox):
+class LeadersLevelGroupBox(QGroupBox):
 
     def __init__(self):
         super().__init__()
+        signalManager.onSelectKeyword.connect(self.__setKeywordData)
         self.setTitle("Führungsstufe")
         self.setMinimumWidth(450)
         __layout = QVBoxLayout()
@@ -35,11 +37,8 @@ class LeadersLevelGroupBox(BaseGroupBox):
 
         return leaderData
 
-    def setDefault(self):
-        for row in self.__rows:
-            row.setDefault()
 
-    def setKeywordData(self, category: str, keyword: str):
+    def __setKeywordData(self, category: str, keyword: str):
         keywordData = DataManager.getKeywordData(category, keyword, "leader")
         for key in keywordData.keys():
             for row in self.__rows:

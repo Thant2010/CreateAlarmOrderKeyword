@@ -1,6 +1,6 @@
-from PySide6.QtWidgets import QLineEdit, QButtonGroup, QRadioButton
+from PyQt6.QtWidgets import QLineEdit, QButtonGroup, QRadioButton
 
-from UtilityClasses.DataManager import DataManager
+from utilityClasses.SignalManager import signalManager
 from elementsGui.elementRows.BaseHBoxRow import BaseHBoxRow
 
 
@@ -8,6 +8,7 @@ class InstructionRow(BaseHBoxRow):
 
     def __init__(self):
         super().__init__()
+        signalManager.onEntryIsSaved.connect(self.__setDefault)
         self.__instructionLineEdit = QLineEdit()
         self.__instructionLineEdit.setMinimumHeight(40)
         self.__instructionLineEdit.setProperty("fontsize", "medium")
@@ -27,9 +28,10 @@ class InstructionRow(BaseHBoxRow):
         else:
             return None
 
-    def setDefault(self):
-        self.__radioCanButton.setChecked(True)
-        self.__instructionLineEdit.setText("")
+    def __setDefault(self, isSaved):
+        if isSaved:
+            self.__radioCanButton.setChecked(True)
+            self.__instructionLineEdit.setText("")
 
     def setRowData(self, text, radioText):
 

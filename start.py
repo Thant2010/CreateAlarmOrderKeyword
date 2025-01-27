@@ -2,9 +2,9 @@ import locale
 import sys
 import traceback
 
-from PySide6 import QtGui
-from PySide6.QtWidgets import QApplication
-from UtilityFunctions.writeErrorToLogFile import writeErrorToLogFile
+from PyQt6 import QtGui
+from PyQt6.QtWidgets import QApplication
+from utilityFunctions.writeErrorToLogFile import writeErrorToLogFile
 from elementsGui.mainPage import MainPage
 
 
@@ -21,12 +21,11 @@ if __name__ == "__main__":
     app.setStyleSheet(stylesheet)
     app.setStyle("Fusion")
     locale.setlocale(locale.LC_ALL, 'de_DE')
-    QtGui.QFontDatabase.addApplicationFont('Font/Leoscar Sans Serif.ttf')
-    QtGui.QFontDatabase.addApplicationFont('Font/Leoscar Serif.ttf')
+    QtGui.QFontDatabase.addApplicationFont('font/Leoscar Sans Serif.ttf')
+    QtGui.QFontDatabase.addApplicationFont('font/Leoscar Serif.ttf')
     QtGui.QFontDatabase.addApplicationFont('font/Orbitron-VariableFont_wght.ttf')
 
     sys.excepthook = exceptionHandler
 
     w = MainPage()
-    #w = TreeViewWindow()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

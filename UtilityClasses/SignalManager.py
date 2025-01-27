@@ -1,9 +1,10 @@
-from PySide6.QtCore import Signal, QObject
+from PyQt6.QtCore import pyqtSignal, QObject
 
 
 class SignalManager(QObject):
 
-    onSelectKeyword = Signal(list)
+    onSelectKeyword = pyqtSignal(str, str)
+    onEntryIsSaved = pyqtSignal(bool)
 
     def __init__(self):
         super().__init__()

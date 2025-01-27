@@ -1,8 +1,8 @@
-from PySide6.QtCore import QModelIndex, Qt
-from PySide6.QtGui import QIcon, QStandardItemModel, QStandardItem
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QTreeView
-from UtilityClasses.DataManager import DataManager
-from UtilityClasses.SignalManager import signalManager
+from PyQt6.QtCore import QModelIndex, Qt
+from PyQt6.QtGui import QIcon, QStandardItemModel, QStandardItem
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QTreeView
+from utilityClasses.DataManager import DataManager
+from utilityClasses.SignalManager import signalManager
 
 
 class TreeViewWindow(QWidget):
@@ -14,7 +14,7 @@ class TreeViewWindow(QWidget):
         self.setWindowTitle("Element wählen")
         self.setWindowIcon(QIcon("icons/windowIcon.ico"))
         self.setMinimumSize(300, 300)
-        self.setWindowModality(Qt.ApplicationModal)
+        self.setWindowModality(Qt.WindowModality.ApplicationModal)
 
         __layout = QVBoxLayout()
         self.setLayout(__layout)
@@ -54,8 +54,8 @@ class TreeViewWindow(QWidget):
                 itemHierachy.append(item.text())
                 index = index.parent()
             itemHierachy.reverse()
-
-            signalManager.onSelectKeyword.emit(itemHierachy)
+            category, keyword = itemHierachy[0], itemHierachy[1]
+            signalManager.onSelectKeyword.emit(category, keyword)
 
             self.close()
 

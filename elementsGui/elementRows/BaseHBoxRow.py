@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QHBoxLayout
+from PyQt6.QtWidgets import QHBoxLayout
 from abc import abstractmethod
 
 class BaseHBoxRow(QHBoxLayout):
@@ -8,10 +8,6 @@ class BaseHBoxRow(QHBoxLayout):
 
     @abstractmethod
     def getRowData(self):
-        pass
-
-    @abstractmethod
-    def setDefault(self):
         pass
 
     @abstractmethod

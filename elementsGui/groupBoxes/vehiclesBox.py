@@ -1,14 +1,16 @@
-from PySide6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QVBoxLayout, QGroupBox
 
-from UtilityClasses.DataManager import DataManager
-from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox
 from globals import vehicles
 from elementsGui.elementRows.vehicleRow import VehicleRow
+from utilityClasses.DataManager import DataManager
+from utilityClasses.SignalManager import signalManager
 
-class VehicleGroupBox(BaseGroupBox):
+
+class VehicleGroupBox(QGroupBox):
 
     def __init__(self):
         super().__init__()
+        signalManager.onSelectKeyword.connect(self.__setKeywordData)
         self.setTitle("Fahrzeuge")
         self.setMinimumWidth(150)
         __layout = QVBoxLayout()
@@ -28,12 +30,9 @@ class VehicleGroupBox(BaseGroupBox):
 
         return vehicleData
 
-    def setKeywordData(self, category: str, keyword: str):
+    def __setKeywordData(self, category: str, keyword: str):
         vehilceData = DataManager.getKeywordData(category, keyword, "vehicle")
         for key in vehilceData.keys():
             for row in self.__vehicleRows:
                 row.setRowData(key, vehilceData[key])
 
-    def setDefault(self):
-        for row in self.__vehicleRows:
-            row.setDefault()

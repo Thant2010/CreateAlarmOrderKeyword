@@ -41,13 +41,13 @@ QLabel {
     font-family: Orbitron;
     font-size: 32pt;
     font-weight: bold;
-    color: rgb(34, 179, 179);
+    color: rgb(182, 14, 14);
 }
 
 QGroupBox {
     font-weight: bold;
     color:rgba(0, 0, 0, 255);
-    background-color: rgba(7, 162, 189, 30);
+    background-color: rgba(128, 6, 6, 30);
     border: 1px solid black;
     border-radius: 5px;
     border-color:rgb(180,180,180);

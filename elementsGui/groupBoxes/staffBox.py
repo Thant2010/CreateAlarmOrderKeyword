@@ -1,15 +1,16 @@
-from PySide6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QVBoxLayout, QGroupBox
 
-from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox
 from globals import staffs
 from elementsGui.elementRows.staffRow import StaffRow
-from UtilityClasses.DataManager import DataManager
+from utilityClasses.DataManager import DataManager
+from utilityClasses.SignalManager import signalManager
 
 
-class StaffGroupBox(BaseGroupBox):
+class StaffGroupBox(QGroupBox):
 
     def __init__(self):
         super().__init__()
+        signalManager.onSelectKeyword.connect(self.__setKeywordData)
         self.setTitle("Mannschaft")
         self.setMinimumHeight(300)
         __layout = QVBoxLayout()
@@ -30,13 +31,9 @@ class StaffGroupBox(BaseGroupBox):
 
         return staffData
 
-    def setKeywordData(self, category: str, keyword: str):
+    def __setKeywordData(self, category: str, keyword: str):
         staffData = DataManager.getKeywordData(category, keyword, "staff")
 
         for key in staffData.keys():
             for row in self.__staffRows:
                 row.setRowData(key, staffData[key])
-
-    def setDefault(self):
-        for row in self.__staffRows:
-            row.setDefault()

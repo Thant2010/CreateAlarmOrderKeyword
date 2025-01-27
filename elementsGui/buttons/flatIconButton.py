@@ -1,7 +1,7 @@
-from PySide6.QtCore import QSize
-from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QPushButton
-from UtilityClasses.shadowEffect import ShadowEffect
+from PyQt6.QtCore import QSize
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QPushButton
+from utilityClasses.ShadowEffect import ShadowEffect
 from globals import iconButtons
 
 class FlatIconButton(QPushButton):

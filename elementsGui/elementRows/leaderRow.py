@@ -1,17 +1,18 @@
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QLabel, QButtonGroup, QRadioButton
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QLabel, QButtonGroup, QRadioButton
 
 from elementsGui.elementRows.BaseHBoxRow import BaseHBoxRow
-
+from utilityClasses.SignalManager import signalManager
 
 class LeaderRow(BaseHBoxRow):
 
     def __init__(self, leader):
+        signalManager.onEntryIsSaved.connect(self.__setDefault)
         super().__init__()
         self.__leaderLabel = QLabel(leader)
         self.__leaderLabel.setProperty("weight", "bold")
         self.__leaderLabel.setProperty("fontsize", "medium")
-        self.__leaderLabel.setAlignment(Qt.AlignCenter)
+        self.__leaderLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.__radioButtonGroup = QButtonGroup()
         self.__radioButtonAlarm = QRadioButton("Alarm")
         self.__radioButtonInfo = QRadioButton("Info")
@@ -28,8 +29,9 @@ class LeaderRow(BaseHBoxRow):
     def getRowData(self):
         return self.__leaderLabel.text(), self.__radioButtonGroup.checkedButton().text()
 
-    def setDefault(self):
-        self.__radioButtonDefault.setChecked(True)
+    def __setDefault(self, isSaved):
+        if isSaved:
+            self.__radioButtonDefault.setChecked(True)
 
     def setRowData(self, leader, value):
         if self.__leaderLabel.text() == leader:

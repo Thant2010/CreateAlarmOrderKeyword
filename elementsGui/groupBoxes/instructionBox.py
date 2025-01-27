@@ -1,14 +1,16 @@
-from PySide6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QVBoxLayout, QGroupBox
 
-from UtilityClasses.DataManager import DataManager
+from utilityClasses.DataManager import DataManager
+from utilityClasses.SignalManager import signalManager
 from elementsGui.elementRows.instructionRow import InstructionRow
-from elementsGui.groupBoxes.baseGroupBox import BaseGroupBox
 
 
-class InstructionGroupBox(BaseGroupBox):
+
+class InstructionGroupBox(QGroupBox):
 
     def __init__(self):
         super().__init__()
+        signalManager.onSelectKeyword.connect(self.__setKeywordData)
         self.setTitle("Anweisungen")
         self.setMinimumHeight(300)
 
@@ -32,14 +34,10 @@ class InstructionGroupBox(BaseGroupBox):
 
         return tuple(values)
 
-    def setKeywordData(self, category: str, keyword: str):
+    def __setKeywordData(self, category: str, keyword: str):
         instructionData = DataManager.getKeywordData(category, keyword, "instructions")
         for i in range(len(instructionData)):
             if instructionData[i] is not None:
                 self.__instructionRows[i].setRowData(instructionData[i][0],
                                                      instructionData[i][1])
 
-
-    def setDefault(self):
-        for row in self.__instructionRows:
-            row.setDefault()

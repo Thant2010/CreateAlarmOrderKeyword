@@ -1,5 +1,5 @@
 import json
-
+from globals import aaoPath
 
 class DataManager:
 
@@ -32,13 +32,13 @@ class DataManager:
 
     @staticmethod
     def getFullData() -> dict:
-        file = open("json/AAO.json", "r")
+        file = open(aaoPath, "r")
         fullData = json.loads(file.read())
         file.close()
         return fullData
 
     @staticmethod
     def __saveFullData(data: dict):
-        file = open("json/AAO.json", "w")
+        file = open(aaoPath, "w")
         file.write(json.dumps(data))
         file.close()
